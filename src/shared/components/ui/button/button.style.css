@@ -3,8 +3,8 @@
   --line-height: 1.5;
   --font-weight: 700;
 
-  --bg-primary: #242424;
-  --bg-primary-hover: #3a3a3a;
+  --bg-primary: #0ca4adad;
+  --bg-primary-hover: #1ca1caca;
   --bg-secondary: #e2e8f0;
   --bg-secondary-hover: #cbd5e1;
   --bg-danger: #dc2626;
@@ -19,6 +19,12 @@
   cursor: pointer;
   display: inline-block;
   line-height: var(--line-height);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 0px 2px;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .btn:hover {
@@ -65,5 +71,6 @@
 }
 .btn-large {
   font-size: 16px;
-  padding: 12px 24px;
+  width: 12rem;
+  height: 1.9rem;
 }
