@@ -1,0 +1,6 @@
+src/*.test.ts
+node_modules/
+build/
+dist/
+*.css
+check-coverage.js

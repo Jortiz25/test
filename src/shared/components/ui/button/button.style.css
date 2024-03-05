@@ -1,0 +1,69 @@
+:root {
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --line-height: 1.5;
+  --font-weight: 700;
+
+  --bg-primary: #242424;
+  --bg-primary-hover: #3a3a3a;
+  --bg-secondary: #e2e8f0;
+  --bg-secondary-hover: #cbd5e1;
+  --bg-danger: #dc2626;
+  --bg-danger-hover: #b91c1c;
+}
+
+.btn {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: var(--line-height);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  color: white;
+  background-color: var(--bg-primary);
+  transition: all 0.1s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--bg-primary-hover);
+}
+
+.btn-secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-secondary-hover);
+}
+
+.btn-danger {
+  color: white;
+  background-color: var(--bg-danger);
+}
+
+.btn-danger:hover {
+  background-color: var(--bg-danger-hover);
+}
+
+.btn-small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.btn-medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.btn-large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
