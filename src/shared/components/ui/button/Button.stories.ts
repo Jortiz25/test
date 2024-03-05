@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './index';
-import { type ButtonProps } from './button.model';
+import type { Meta, StoryObj } from '@storybook/react'
+import { Button } from './index'
+import { type ButtonProps } from './button.model'
 
 const meta = {
   title: 'Example/Button',
@@ -14,37 +14,38 @@ const meta = {
       control: {
         type: 'text',
       },
-    }
+    },
   },
-} satisfies Meta<ButtonProps>;
+} satisfies Meta<ButtonProps>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
     children: 'Hola',
+    variant: 'btn-primary',
   },
-};
+}
 
 export const Secondary: Story = {
   args: {
     children: 'Button',
-    variant: 'secondary',
-    size: 'md',
+    variant: 'btn-primary',
+    size: 'btn-medium',
   },
-};
+}
 
 export const Large: Story = {
   args: {
     children: 'Button',
-    size: 'lg',
+    size: 'btn-large',
   },
-};
+}
 
 export const Small: Story = {
   args: {
     children: 'Button',
-    size: 'sm',
+    size: 'btn-small',
   },
-};
+}

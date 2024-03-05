@@ -1,0 +1,18 @@
+.typography {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.font-size-sm {
+  font-size: 0.875rem;
+}
+
+.font-size-md {
+  font-size: 1rem;
+}
+
+.font-size-lg {
+  font-size: 1.25rem;
+}
+
+

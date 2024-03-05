@@ -1,10 +1,6 @@
-interface IButtonVariants {
-  variant?: 'primary' | 'secondary';
-  size?: 'md' | 'sm' | 'lg' | 'icon';
-}
-
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    IButtonVariants {
-  asChild?: boolean;
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  size?: 'btn-small' | 'btn-medium' | 'btn-large'
+  variant?: 'btn-primary' | 'btn-secondary' | 'btn-danger'
+  asChild?: boolean
 }

@@ -1,8 +1,7 @@
-:root {
-  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --line-height: 1.5;
-  --font-weight: 700;
+/* button.style.css */
 
+:root {
+  /* Variables de colores */
   --bg-primary: #0ca4adad;
   --bg-primary-hover: #1ca1caca;
   --bg-secondary: #e2e8f0;
@@ -12,29 +11,41 @@
 }
 
 .btn {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 700;
   border: 0;
   border-radius: 3em;
   cursor: pointer;
   display: inline-block;
-  line-height: var(--line-height);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 0px 2px;
-}
-
-.btn:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
+  line-height: 1.5;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+
+.btn-medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+
+.btn-large {
+  font-size: 16px;
+  width: 12rem;
+  height: 1.9rem;
 }
 
 .btn-primary {
   color: white;
   background-color: var(--bg-primary);
-  transition: all 0.1s ease-in-out;
 }
 
 .btn-primary:hover {
@@ -45,7 +56,6 @@
   color: #333;
   background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-  transition: all 0.2s ease-in-out;
 }
 
 .btn-secondary:hover {
@@ -59,18 +69,4 @@
 
 .btn-danger:hover {
   background-color: var(--bg-danger-hover);
-}
-
-.btn-small {
-  font-size: 12px;
-  padding: 10px 16px;
-}
-.btn-medium {
-  font-size: 14px;
-  padding: 11px 20px;
-}
-.btn-large {
-  font-size: 16px;
-  width: 12rem;
-  height: 1.9rem;
 }
