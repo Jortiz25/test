@@ -6,9 +6,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color-scheme: dark light; */
+  color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -78,15 +77,40 @@ p a {
   color: inherit;
   text-decoration: underline;
 }
-
+/* layout */
 .container {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  position: relative;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
-.text-center {
-  text-align: center;
+.navbar-container {
+  position: relative;
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  background-color: var(--bg-primary);
+}
+
+.content-container {
+  position: relative;
+  width: auto;
+  height: 100%;
+  margin: auto;
+  padding: 2rem;
+  margin-top: 5rem;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 5rem;
 }
