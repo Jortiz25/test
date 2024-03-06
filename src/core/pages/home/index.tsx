@@ -18,14 +18,16 @@ function HomePage() {
         </Typography>
       </section>
 
-      <InputLabel
-        label="Celular"
-        placeholder="Ingresa tu número de celular registrado"
-      />
-      <InputLabel
-        label="Clave"
-        placeholder="Ingresa tu clave de ingreso a DING"
-      />
+      <section className="login-input__container">
+        <InputLabel
+          label="Celular"
+          placeholder="Ingresa tu número de celular registrado"
+        />
+        <InputLabel
+          label="Clave"
+          placeholder="Ingresa tu clave de ingreso a DING"
+        />
+      </section>
 
       <section>
         <Typography variant="paragraph" className="text-center login-footer">
@@ -34,7 +36,13 @@ function HomePage() {
         </Typography>
       </section>
 
-      <Button center variant="btn-primary" size="btn-large" className="w-full">
+      <Button
+        center
+        variant="btn-primary"
+        size="btn-large"
+        className="w-full"
+        disabled
+      >
         Continuar
       </Button>
       <Button center variant="btn-primary" size="btn-large" className="w-full">

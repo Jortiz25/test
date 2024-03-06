@@ -19,16 +19,27 @@
   display: inline-block;
   line-height: 1.5;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-  transition: all 0.2s ease-in-out;
-}
-
-.btn-centered {
-  margin: 0px auto;
+  transition: all 0.1s ease-in-out;
 }
 
 .btn:hover {
   transform: scale(1.02);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn:disabled {
+  background-color: var(--acent-color);
+  color: white;
+  cursor: not-allowed;
+  transform: scale(1);
+}
+
+.btn:disabled:hover {
+  background-color: var(--acent-color);
+}
+
+.btn-centered {
+  margin: 0px auto;
 }
 
 .btn-small {

@@ -128,7 +128,7 @@ p a {
   flex-direction: column;
   justify-content: center;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 2rem auto;
   gap: 1rem;
 }
 
@@ -140,6 +140,12 @@ p a {
 .login-description {
   color: var(--acent-color);
   padding-bottom: 2rem;
+}
+
+.login-input__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .login-footer {
