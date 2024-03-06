@@ -1,5 +1,5 @@
 src/*.test.ts
-node_modules/
+node_modules/*
 build/
 dist/
 *.css
