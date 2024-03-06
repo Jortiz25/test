@@ -2,12 +2,12 @@
 
 :root {
   /* Variables de colores */
-  --bg-primary: #0ca4adad;
-  --bg-primary-hover: #1ca1caca;
-  --bg-secondary: #e2e8f0;
-  --bg-secondary-hover: #cbd5e1;
-  --bg-danger: #dc2626;
-  --bg-danger-hover: #b91c1c;
+  --btn-color-primary: #0ca4adad;
+  --btn-color-primary-hover: #1ca1caca;
+  --btn-color-secondary: #e2e8f0;
+  --btn-color-secondary-hover: #cbd5e1;
+  --btn-color-danger: #dc2626;
+  --btn-color-danger-hover: #b91c1c;
 }
 
 .btn {
@@ -20,6 +20,10 @@
   line-height: 1.5;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   transition: all 0.2s ease-in-out;
+}
+
+.btn-centered {
+  margin: 0px auto;
 }
 
 .btn:hover {
@@ -45,11 +49,11 @@
 
 .btn-primary {
   color: white;
-  background-color: var(--bg-primary);
+  background-color: var(--btn-color-primary);
 }
 
 .btn-primary:hover {
-  background-color: var(--bg-primary-hover);
+  background-color: var(--btn-color-primary-hover);
 }
 
 .btn-secondary {
@@ -59,14 +63,14 @@
 }
 
 .btn-secondary:hover {
-  background-color: var(--bg-secondary-hover);
+  background-color: var(--btn-color-secondary-hover);
 }
 
 .btn-danger {
   color: white;
-  background-color: var(--bg-danger);
+  background-color: var(--btn-color-danger);
 }
 
 .btn-danger:hover {
-  background-color: var(--bg-danger-hover);
+  background-color: var(--btn-color-danger-hover);
 }

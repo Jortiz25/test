@@ -6,13 +6,14 @@
   line-height: 1.5;
   font-weight: 400;
 
-  /* color-scheme: dark light; */
   color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --acent-color: #76819a;
 }
 
 * {
@@ -77,6 +78,16 @@ p a {
   color: inherit;
   text-decoration: underline;
 }
+
+/* utils */
+.w-full {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
 /* layout */
 .container {
   transition-property: all;
@@ -103,14 +114,36 @@ p a {
   width: auto;
   height: 100%;
   margin: auto;
-  padding: 2rem;
-  margin-top: 5rem;
+  padding: 0.5rem;
 }
 
 .main-content {
   width: 100%;
-  max-width: 960px;
   margin: 0 auto;
-  padding: 2rem;
-  margin-top: 5rem;
+}
+
+/* login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.login-title {
+  color: var(--acent-color);
+  padding-bottom: 2rem;
+}
+
+.login-description {
+  color: var(--acent-color);
+  padding-bottom: 2rem;
+}
+
+.login-footer {
+  color: var(--acent-color);
+  padding: 2rem 0px;
+  font-size: 0.9rem;
 }

@@ -8,7 +8,12 @@ const Home = lazy(() => import('../../pages/home'))
 // import Auth from '../../pages/auth';
 // import PageNotFound from '../../pages/404';
 
-const App = () => {
+/**
+ * Renders the main application component.
+ *
+ * @return {JSX.Element} The main application component.
+ */
+const App = (): JSX.Element => {
   return (
     <BrowserRouter>
       <Suspense fallback={<span>Loading ...</span>}>

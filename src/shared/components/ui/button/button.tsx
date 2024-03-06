@@ -9,12 +9,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       variant = 'btn-primary',
       size = 'btn-medium',
       asChild = false,
+      center = false,
       ...props
     },
     ref
   ) => {
     const Comp = asChild ? 'span' : 'button'
-    const combinedClasses = `${size} ${variant} ${className ?? ''}`
+    const combinedClasses = `${center ? 'btn-centered' : ''} ${size} ${variant} ${className ?? ''}`
 
     return <Comp className={`btn ${combinedClasses}`} ref={ref} {...props} />
   }

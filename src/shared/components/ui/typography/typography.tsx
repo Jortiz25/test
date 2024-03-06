@@ -16,15 +16,16 @@ const Typography: React.FC<TypographyProps> = ({
   variant = 'paragraph',
   size = 'medium',
   children,
+  className,
   ...props
-}) => {
+}): JSX.Element => {
   const Component = variant === 'paragraph' ? 'p' : variant
 
   const fontSizeClass = `font-size-${size}`
 
   return (
     <Component
-      className={`typography ${fontSizeClass ? fontSizeClass : ''}`}
+      className={`typography ${fontSizeClass ? fontSizeClass : ''} ${className ?? ''}`}
       {...props}
     >
       {children}
