@@ -8,24 +8,23 @@ import './typography.style.css'
  *
  * @param {TypographyProps} variant - the variant of the typography component
  * @param {string} size - the size of the typography component
- * @param {ReactNode} children - the content to be rendered inside the typography component
  * @param {object} props - additional props to be spread on the typography component
  * @return {ReactNode} the rendered typography component
  */
 const Typography: React.FC<TypographyProps> = ({
   variant = 'paragraph',
-  size = 'medium',
+  size = 'md',
   children,
   className,
   ...props
-}): JSX.Element => {
+}: TypographyProps): JSX.Element => {
   const Component = variant === 'paragraph' ? 'p' : variant
 
   const fontSizeClass = `font-size-${size}`
 
   return (
     <Component
-      className={`typography ${fontSizeClass ? fontSizeClass : ''} ${className ?? ''}`}
+      className={`typography ${fontSizeClass} ${className ?? ''}`}
       {...props}
     >
       {children}

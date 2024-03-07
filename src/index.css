@@ -67,7 +67,7 @@ h6 {
 p {
   font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 p:last-child {
@@ -84,8 +84,16 @@ p a {
   width: 100%;
 }
 
+.text-sm {
+  font-size: 0.8rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-destructive {
+  color: red;
 }
 
 /* layout */
@@ -128,8 +136,8 @@ p a {
   flex-direction: column;
   justify-content: center;
   max-width: 400px;
-  margin: 2rem auto;
-  gap: 1rem;
+  margin: 0px auto;
+  gap: 0.5rem;
 }
 
 .login-title {
@@ -150,6 +158,6 @@ p a {
 
 .login-footer {
   color: var(--acent-color);
-  padding: 2rem 0px;
+  padding: 0.5rem 0px;
   font-size: 0.9rem;
 }
