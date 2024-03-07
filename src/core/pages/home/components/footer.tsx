@@ -5,7 +5,12 @@ import { useModalStore } from '@/store/modal'
 function FormFooter({ isFormValid }: { isFormValid: boolean }) {
   const { showModal } = useModalStore()
 
-  const modelTest = () => showModal()
+  const modelTest = () =>
+    showModal({
+      title: 'Advertencia',
+      description: '¿Estás seguro de cancelar el pago de tu compra?',
+      type: 'warning',
+    })
 
   return (
     <section className="login-footer">

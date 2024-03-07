@@ -18,7 +18,7 @@ import FormFooter from './footer'
  *
  * @return {JSX.Element} The rendered login form component.
  */
-function LoginForm() {
+function LoginForm(): JSX.Element {
   const { defaultValues, onSubmit } = useDefaultValues()
 
   const form = useForm<FormValues>({

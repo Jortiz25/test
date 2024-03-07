@@ -1,6 +1,5 @@
 import ReactDOM from 'react-dom'
 
-import { useModalStore } from '@/store/modal'
 import React from 'react'
 import './modal.style.css'
 
@@ -15,16 +14,8 @@ export const Backdrop = ({
 }: {
   children: React.ReactNode | React.ReactNode[] | JSX.Element | JSX.Element[]
 }): React.ReactPortal => {
-  const { closeModal } = useModalStore()
-
   return ReactDOM.createPortal(
-    <div
-      className="modal-container"
-      onClick={(e) => {
-        e.stopPropagation()
-        closeModal()
-      }}
-    >
+    <div className="modal-container">
       <div className="modal-content">{children}</div>
     </div>,
     document.getElementById('app-modal')!

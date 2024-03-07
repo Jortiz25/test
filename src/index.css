@@ -13,6 +13,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --color-primary: #0ca4adad;
+  --color-primary-hover: #1ca1caca;
+  
+  --color-secondary: #e2e8f0;
+  --color-secondary-hover: #cbd5e1;
+  
+  --color-danger: #dc2626;
+  --color-danger-hover: #b91c1c;
+
+  --color-success: #22c55e;
+  --color-success-hover: #16a34a;
+
+  --color-warning: #f59e0b;
+  --color-warning-hover: #d97706;
+
   --acent-color: #76819a;
 }
 

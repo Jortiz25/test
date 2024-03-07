@@ -7,6 +7,17 @@
   padding: 1rem;
 }
 
+.modal-image__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-image__body {
+  width: 3rem;
+  height: 3rem;
+}
+
 .modal-container {
   position: absolute;
   top: 0;
@@ -22,12 +33,11 @@
 }
 
 .modal-content {
-  width: clamp(30%, 10px, 90%);
+  width: 30%, 10px, 90%;
   height: min(50%, 14rem);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1.5rem;
   font-size: 1.2rem;
   border-radius: 1rem;
   background-color: #ffff;
