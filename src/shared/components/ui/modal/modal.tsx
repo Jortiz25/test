@@ -1,5 +1,7 @@
 import { useModalStore } from '@/store/modal'
 import { Backdrop } from './backdrop'
+import { Button } from '../button'
+import { Typography } from '../typography'
 
 function Modal() {
   const { closeModal } = useModalStore()
@@ -13,18 +15,21 @@ function Modal() {
           closeModal()
         }}
       >
-        <h3>Modal</h3>
-        <p>
+        <Typography variant="h3" size="xl">
+          Modal
+        </Typography>
+        <Typography variant="paragraph" size="sm">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ullam
-          inventore temporibus commodi sapiente, molestiae voluptates facere
-          repellat nisi laudantium dolorum minima! Magnam corrupti soluta totam
-          incidunt nesciunt quisquam libero.
-        </p>
-        <button
-          style={{ color: 'white', background: 'black', outline: 'none' }}
-        >
-          Close
-        </button>
+          inventore temporibus commodi
+        </Typography>
+        <section className="modal-content__buttons">
+          <Button variant="btn-danger" size="btn-medium">
+            cancelar
+          </Button>
+          <Button variant="btn-primary" size="btn-medium">
+            volver
+          </Button>
+        </section>
       </div>
     </Backdrop>
   )

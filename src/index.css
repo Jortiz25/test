@@ -96,16 +96,6 @@ p a {
   color: red;
 }
 
-.uwu {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #101315;
-}
-
 /* layout */
 .container {
   transition-property: all;
