@@ -2,7 +2,7 @@ import { Button } from '@/shared/components/ui/button'
 import { Typography } from '@/shared/components/ui/typography'
 import { useModalStore } from '@/store/modal'
 
-function FormFooter() {
+function FormFooter({ isFormValid }: { isFormValid: boolean }) {
   const { showModal } = useModalStore()
 
   const modelTest = () => showModal()
@@ -22,7 +22,7 @@ function FormFooter() {
         variant="btn-primary"
         size="btn-large"
         className="w-full"
-        disabled
+        disabled={!isFormValid ? true : false}
         type="submit"
       >
         Continuar
