@@ -157,6 +157,14 @@ p a {
 }
 
 .login-footer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.login-footer__description {
   color: var(--acent-color);
   padding: 0.5rem 0px;
   font-size: 0.9rem;
