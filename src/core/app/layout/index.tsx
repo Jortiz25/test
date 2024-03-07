@@ -1,19 +1,22 @@
+import { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from './components/navbar'
-
-// import { useEffect } from 'react';
+import { useModalStore } from '@/store/modal'
+import Modal from '@/shared/components/ui/modal/modal'
 
 function RootLayout() {
-  //   useEffect(() => {
-  //     const openPublication = () => {
-  //       if () {
-  //         document.body.style.overflow = 'hidden';
-  //       } else {
-  //         document.body.style.overflow = '';
-  //       }
-  //     };
-  //     openPublication();
-  //   }, [isModalOpen]);
+  const { isModalOpen } = useModalStore()
+
+  useEffect(() => {
+    const openPublication = () => {
+      if (isModalOpen) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = ''
+      }
+    }
+    openPublication()
+  }, [isModalOpen])
 
   return (
     <div className="container">
@@ -23,6 +26,7 @@ function RootLayout() {
           <Outlet />
         </main>
       </div>
+      {isModalOpen && <Modal />}
     </div>
   )
 }

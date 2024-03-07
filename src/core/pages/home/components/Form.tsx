@@ -10,9 +10,8 @@ import {
   FormMessage,
 } from '@/shared/components/form'
 import { Input } from '@/shared/components/ui/input'
-import { Typography } from '@/shared/components/ui/typography'
-import { Button } from '@/shared/components/ui/button'
 import { type FormValues, formSchema, useDefaultValues } from './utils/login'
+import FormFooter from './footer'
 
 function LoginForm() {
   const { defaultValues, onSubmit } = useDefaultValues()
@@ -65,40 +64,6 @@ function LoginForm() {
         <FormFooter />
       </form>
     </Form>
-  )
-}
-
-function FormFooter() {
-  return (
-    <section className="login-footer">
-      <Typography
-        variant="paragraph"
-        className="text-center login-footer__description"
-      >
-        Si olvidaste tu clave, ingresa a tu aplicación de DING y realiza el
-        cambio de clave
-      </Typography>
-
-      <Button
-        center
-        variant="btn-primary"
-        size="btn-large"
-        className="w-full"
-        disabled
-        type="submit"
-      >
-        Continuar
-      </Button>
-      <Button
-        center
-        variant="btn-primary"
-        size="btn-large"
-        className="w-full"
-        type="button"
-      >
-        Cancelar
-      </Button>
-    </section>
   )
 }
 

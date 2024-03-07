@@ -16,17 +16,19 @@ const Home = lazy(() => import('../../pages/home'))
 const App = (): JSX.Element => {
   return (
     <BrowserRouter>
-      <Suspense fallback={<span>Loading ...</span>}>
+      <Suspense fallback={<span className="text-center">Loading ...</span>}>
         <Routes>
-          <Route element={<PrivateRoute />}>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
+          <Route element={<Layout />}>
+            <Route element={<PrivateRoute />}>
+              <Route path="/">
+                <Route index element={<Home />} />
+              </Route>
             </Route>
+            <Route path="/auth">
+              <Route index path="login" element={<Home />} />
+            </Route>
+            {/* <Route path='*' element={<PageNotFound />} /> */}
           </Route>
-          <Route path="/auth" element={<Layout />}>
-            <Route index path="login" element={<Home />} />
-          </Route>
-          {/* <Route path='*' element={<PageNotFound />} /> */}
         </Routes>
       </Suspense>
     </BrowserRouter>
