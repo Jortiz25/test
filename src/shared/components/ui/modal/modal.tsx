@@ -40,7 +40,7 @@ function Modal() {
               <Button
                 variant={type === 'warning' ? 'btn-warning' : 'btn-danger'}
                 size="btn-medium"
-                onClick={() => onSussess(() => console.log('hola'))}
+                onClick={onSussess ? onSussess : closeModal}
               >
                 Cancelar
               </Button>

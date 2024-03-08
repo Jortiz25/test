@@ -13,7 +13,6 @@ export interface IResponseData<T> {
   data?: T
 }
 
-export interface IResponseAuth<T> {
-  error?: IError
-  data?: T
+export interface IResponseAuth {
+  token: string
 }
