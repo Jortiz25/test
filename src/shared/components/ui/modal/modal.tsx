@@ -7,7 +7,8 @@ import Danger from '@/assets/danger.png'
 import Warning from '@/assets/warning.png'
 
 function Modal() {
-  const { closeModal, title, description, type, onSussess } = useModalStore()
+  const { closeModal, title, description, type, onSussess, isOnlyAceptButton } =
+    useModalStore()
 
   return (
     <Backdrop>
@@ -26,21 +27,32 @@ function Modal() {
           {description}
         </Typography>
         <section className="modal-content__buttons">
-          <Button
-            variant={type === 'warning' ? 'btn-warning' : 'btn-danger'}
-            size="btn-medium"
-            onClick={() => onSussess(() => console.log('hola'))}
-          >
-            cancelar
-          </Button>
-          {type !== 'error' && (
+          {isOnlyAceptButton ? (
             <Button
-              variant={type === 'warning' ? 'btn-warning' : 'btn-primary'}
+              variant={type === 'warning' ? 'btn-warning' : 'btn-danger'}
               size="btn-medium"
               onClick={closeModal}
             >
-              volver
+              Aceptar
             </Button>
+          ) : (
+            <>
+              <Button
+                variant={type === 'warning' ? 'btn-warning' : 'btn-danger'}
+                size="btn-medium"
+                onClick={() => onSussess(() => console.log('hola'))}
+              >
+                Cancelar
+              </Button>
+
+              <Button
+                variant={type === 'warning' ? 'btn-warning' : 'btn-primary'}
+                size="btn-medium"
+                onClick={closeModal}
+              >
+                Volver
+              </Button>
+            </>
           )}
         </section>
       </div>

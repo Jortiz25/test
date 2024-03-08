@@ -5,6 +5,8 @@ type ModalProps = {
   title: string
   description: string
   type: 'warning' | 'error'
+  isOnlyAceptButton: boolean
+  onSussess?: () => void
 }
 
 export interface ModalSlice {
@@ -12,9 +14,16 @@ export interface ModalSlice {
   description: string
   isModalOpen: boolean
   type: 'warning' | 'error'
+  isOnlyAceptButton: boolean
 
   onSussess: (callback: () => void) => void
-  showModal: ({ title, description, type }: ModalProps) => void
+  showModal: ({
+    title,
+    description,
+    type,
+    isOnlyAceptButton,
+    onSussess,
+  }: ModalProps) => void
   closeModal: () => void
 }
 
@@ -25,8 +34,16 @@ export const useModalStore = create<ModalSlice>()(
       type: 'warning',
       description: '',
       isModalOpen: false,
-      showModal: ({ title, description, type }) =>
-        set(() => ({ isModalOpen: true, title, description, type })),
+      isOnlyAceptButton: false,
+      showModal: ({ title, description, type, isOnlyAceptButton }) =>
+        set(() => ({
+          isModalOpen: true,
+          title,
+          description,
+          type,
+          isOnlyAceptButton,
+        })),
+
       closeModal: () =>
         set(() => ({
           title: '',

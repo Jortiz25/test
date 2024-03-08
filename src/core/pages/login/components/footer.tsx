@@ -10,6 +10,7 @@ function FormFooter({ isFormValid }: { isFormValid: boolean }) {
       title: 'Advertencia',
       description: '¿Estás seguro de cancelar el pago de tu compra?',
       type: 'warning',
+      isOnlyAceptButton: false,
     })
 
   return (
@@ -26,7 +27,6 @@ function FormFooter({ isFormValid }: { isFormValid: boolean }) {
         center
         variant="btn-primary"
         size="btn-large"
-        className="w-full"
         disabled={!isFormValid ? true : false}
         type="submit"
       >
@@ -37,7 +37,6 @@ function FormFooter({ isFormValid }: { isFormValid: boolean }) {
         center
         variant="btn-primary"
         size="btn-large"
-        className="w-full"
         type="button"
       >
         Cancelar

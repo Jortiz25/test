@@ -3,9 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import PrivateRoute from './components/private'
 
 const Layout = lazy(() => import('../layout'))
-const Home = lazy(() => import('../../pages/home'))
 
-// import Auth from '../../pages/auth';
+import Auth from '../../pages/login'
 // import PageNotFound from '../../pages/404';
 
 /**
@@ -21,11 +20,11 @@ const App = (): JSX.Element => {
           <Route element={<Layout />}>
             <Route element={<PrivateRoute />}>
               <Route path="/">
-                <Route index element={<Home />} />
+                <Route index element={<Auth />} />
               </Route>
             </Route>
             <Route path="/auth">
-              <Route index path="login" element={<Home />} />
+              <Route index path="login" element={<Auth />} />
             </Route>
             {/* <Route path='*' element={<PageNotFound />} /> */}
           </Route>
