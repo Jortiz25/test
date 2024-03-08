@@ -41,7 +41,7 @@ export const useDefaultValues = () => {
             description:
               'Los datos ingresados no se encuentran registrados en nuestro sistema.',
             type: 'error',
-            isOnlyAceptButton: false,
+            isOnlyAceptButton: true,
           })
         }
       }

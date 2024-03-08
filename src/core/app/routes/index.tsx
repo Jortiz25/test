@@ -5,6 +5,7 @@ import PrivateRoute from './components/private'
 const Layout = lazy(() => import('../layout'))
 
 import Auth from '../../pages/login'
+import Loader from '@/shared/components/ui/loader/loader'
 // import PageNotFound from '../../pages/404';
 
 /**
@@ -12,10 +13,19 @@ import Auth from '../../pages/login'
  *
  * @return {JSX.Element} The main application component.
  */
+
+const LoaderScreen = (): JSX.Element => {
+  return (
+    <div className="loader-screen">
+      <Loader />
+    </div>
+  )
+}
+
 const App = (): JSX.Element => {
   return (
     <BrowserRouter>
-      <Suspense fallback={<span className="text-center">Loading ...</span>}>
+      <Suspense fallback={<LoaderScreen />}>
         <Routes>
           <Route element={<Layout />}>
             <Route element={<PrivateRoute />}>

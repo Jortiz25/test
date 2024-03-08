@@ -152,6 +152,16 @@ p a {
   margin: 0 auto;
 }
 
+/* loader */
+
+.loader-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
 /* login */
 .login-container {
   display: flex;
