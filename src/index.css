@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  font-family: 'Poppins', Istok Web, Inter, system-ui, Avenir, Helvetica, Arial,
+  font-family:
+    'Poppins',
+    Istok Web,
+    Inter,
+    system-ui,
+    Avenir,
+    Helvetica,
+    Arial,
     sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -15,10 +22,10 @@
 
   --color-primary: #0ca4adad;
   --color-primary-hover: #1ca1caca;
-  
+
   --color-secondary: #e2e8f0;
   --color-secondary-hover: #cbd5e1;
-  
+
   --color-danger: #dc2626;
   --color-danger-hover: #b91c1c;
 
@@ -183,4 +190,79 @@ p a {
   color: var(--acent-color);
   padding: 0.5rem 0px;
   font-size: 0.9rem;
+}
+
+/* responsive */
+
+@media screen and (max-width: 768px) {
+  .content-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-container {
+    height: 4rem;
+  }
+
+  .main-content {
+    margin: 0px;
+  }
+
+  .login-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .login-title {
+    padding-bottom: 1rem;
+  }
+
+  .login-description {
+    padding-bottom: 1rem;
+  }
+
+  .login-footer {
+    padding-top: 1rem;
+  }
+
+  .login-footer__description {
+    padding: 0.5rem 0px;
+  }
+
+  .login-input__container {
+    gap: 0.5rem;
+  }
+
+  .login-input {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login-container {
+    padding: 1rem;
+  }
+
+  .login-title {
+    padding-bottom: 1rem;
+  }
+
+  .login-description {
+    padding-bottom: 1rem;
+  }
+
+  .login-footer {
+    padding-top: 1rem;
+  }
+
+  .login-footer__description {
+    padding: 0.5rem 0px;
+  }
+
+  .login-input__container {
+    gap: 0.5rem;
+  }
+
+  .login-input {
+    padding: 0.5rem;
+  }
 }
