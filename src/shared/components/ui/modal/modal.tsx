@@ -5,8 +5,13 @@ import { Typography } from '../typography'
 
 import Danger from '@/assets/danger.png'
 import Warning from '@/assets/warning.png'
+/**
+ * Renders a modal component with the specified title, description, type, and buttons.
+ *
+ * @return {JSX.Element} The modal component to be rendered.
+ */
 
-function Modal() {
+function Modal(): JSX.Element {
   const { closeModal, title, description, type, onSussess, isOnlyAceptButton } =
     useModalStore()
 
@@ -17,7 +22,7 @@ function Modal() {
           <img
             src={type === 'warning' ? Warning : Danger}
             className="modal-image__body"
-            alt=""
+            alt="logo_modal"
           />
         </picture>
         <Typography variant="h3" size="xl">

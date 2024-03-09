@@ -16,7 +16,7 @@ export const Backdrop = ({
 }): React.ReactPortal => {
   return ReactDOM.createPortal(
     <div className="modal-container">
-      <div className="modal-content">{children}</div>
+      <div className="modal-content slide-top">{children}</div>
     </div>,
     document.getElementById('app-modal')!
   )

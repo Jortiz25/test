@@ -1,8 +1,7 @@
 /* button.style.css */
 
 .btn {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   border: 0;
   border-radius: 3em;
   cursor: pointer;

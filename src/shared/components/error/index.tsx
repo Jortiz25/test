@@ -38,7 +38,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
             pagina
           </h1>
           <h2 className="error-subtitle">¿Has intentado recargar la pagina?</h2>
-          {/* <button onClick={this.reloadPage}>Recargar</button> */}
+          <button onClick={() => this.reloadPage()}>Recargar</button>
         </div>
       )
     }

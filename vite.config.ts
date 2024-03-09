@@ -14,8 +14,22 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['json-summary', 'text', 'text-summary'],
       include: ['src/**/*.{js,jsx,ts,tsx}'],
+      exclude: [
+        '**/*.model.ts',
+        '**/*.stories.ts',
+        '**/*.d.ts',
+        '**/interfaces.ts',
+      ],
     },
-    exclude: ['**/node_modules/**', 'postcss.config.cjs', 'talwind.config.cjs'],
+    exclude: [
+      '**/node_modules/**',
+      'postcss.config.cjs',
+      'talwind.config.cjs',
+      '**/dist/**',
+      '**/__tests__/**',
+      '**/*.model.ts',
+      '**/*.stories.ts',
+    ],
   },
   resolve: {
     alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],

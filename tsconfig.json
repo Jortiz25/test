@@ -29,7 +29,8 @@
     ".eslintrc.cjs",
     ".prettierrc.cjs",
     "check-coverage.js",
-    "vite.config.ts"
-, "__test__/app.test.tsx"  ],
+    "vite.config.ts",
+    "__test__/**/*.test.tsx"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

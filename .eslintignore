@@ -1,4 +1,5 @@
 src/*.test.ts
+__test__/*
 node_modules/*
 build/
 dist/

@@ -1,6 +1,6 @@
 import LoginForm from './components/Form'
 
-function HomePage() {
+function LoginPage() {
   return (
     <div className="login-container">
       <LoginForm />
@@ -8,4 +8,4 @@ function HomePage() {
   )
 }
 
-export default HomePage
+export default LoginPage
