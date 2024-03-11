@@ -6,21 +6,24 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from '@/shared/components/form'
 import { Input } from '@/shared/components/ui/input'
-import { type FormValues, formSchema, useDefaultValues } from './utils/login'
+import { type FormValues, formSchema, useDefaultValues } from './utils/otp'
 import FormFooter from './footer'
 import Loader from '@/shared/components/ui/loader/loader'
-import LoginHeader from './header'
+import OtpHeader from './header'
+
+import useCountdown from '@/shared/hooks/useCountDown'
+import CountDownLoader from '@/shared/components/ui/count-down-loader'
 
 /**
- * Render the login form with default values and form validation.
+ * Renders the OTP form.
  *
- * @return {JSX.Element} The rendered login form component.
+ * @return {JSX.Element} The JSX element for the OTP form
  */
-function LoginForm(): JSX.Element {
+
+function OtpForm(): JSX.Element {
   const { defaultValues, onSubmit, isLoading } = useDefaultValues()
 
   const form = useForm<FormValues>({
@@ -29,6 +32,12 @@ function LoginForm(): JSX.Element {
     mode: 'all',
   })
 
+  const onComplete = () => {
+    console.log('onComplete')
+  }
+
+  const count = useCountdown({ direction: 90, onComplete })
+
   const { formState } = form
   const isFormValid = formState.isValid && formState.isDirty
 
@@ -36,8 +45,8 @@ function LoginForm(): JSX.Element {
 
   return (
     <>
-      <LoginHeader />
       <Form {...form}>
+        <OtpHeader />
         <form
           autoComplete="off"
           autoCorrect="off"
@@ -46,17 +55,16 @@ function LoginForm(): JSX.Element {
         >
           <FormField
             control={form.control}
-            name="phoneNumber"
+            name="otp"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Celular</FormLabel>
                 <FormControl>
                   <Input
                     autoComplete="off"
                     autoCorrect="off"
                     type="number"
-                    placeholder="Ingresa tu número de celular registrado"
-                    label="Celular"
+                    placeholder="Ingresa el código OTP"
+                    label="otp"
                     {...field}
                   />
                 </FormControl>
@@ -64,31 +72,12 @@ function LoginForm(): JSX.Element {
               </FormItem>
             )}
           />
-          <FormField
-            control={form.control}
-            name="password"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Clave</FormLabel>
-                <FormControl>
-                  <Input
-                    type="password"
-                    autoComplete="off"
-                    autoCorrect="off"
-                    placeholder="Ingresa tu clave de ingreso a DING"
-                    label="Clave"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormFooter isFormValid={isFormValid} />
+          <CountDownLoader count={count} />
+          <FormFooter isFormValid={isFormValid} isCountZero={count === 0} />
         </form>
       </Form>
     </>
   )
 }
 
-export default LoginForm
+export default OtpForm

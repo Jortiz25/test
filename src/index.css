@@ -118,6 +118,18 @@ p a {
   color: red;
 }
 
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
 .slide-top {
   -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -178,6 +190,17 @@ p a {
   height: 100vh;
 }
 
+/* header */
+.form_header-title {
+  color: var(--acent-color);
+  padding-bottom: 2rem;
+}
+
+.form_header-description {
+  color: var(--acent-color);
+  padding-bottom: 2rem;
+}
+
 /* login */
 .login-container {
   display: flex;
@@ -188,31 +211,22 @@ p a {
   gap: 0.5rem;
 }
 
-.login-title {
-  color: var(--acent-color);
-  padding-bottom: 2rem;
-}
-
-.login-description {
-  color: var(--acent-color);
-  padding-bottom: 2rem;
-}
-
-.login-input__container {
+/* form */
+.form-input__container {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-.login-footer {
+.form-footer {
   display: flex;
   gap: 1rem;
   justify-content: center;
   flex-direction: column;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
 }
 
-.login-footer__description {
+.form-footer__description {
   color: var(--acent-color);
   padding: 0.5rem 0px;
   font-size: 0.9rem;

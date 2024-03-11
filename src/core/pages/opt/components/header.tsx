@@ -1,6 +1,6 @@
 import { Typography } from '@/shared/components/ui/typography'
 
-function LoginHeader() {
+function OtpHeader() {
   return (
     <section className="w-full">
       <Typography
@@ -14,11 +14,11 @@ function LoginHeader() {
         variant="paragraph"
         className="text-center form_header-description"
       >
-        Por favor ingresa tu número de celular y la clave con la que normalmente
-        ingresas a DING.
+        Por favor ingresa el código de 6 dígitos que te hemos enviado, para
+        continuar con tu pago.
       </Typography>
     </section>
   )
 }
 
-export default LoginHeader
+export default OtpHeader

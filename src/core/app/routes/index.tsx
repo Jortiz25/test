@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import PrivateRoute from './components/private'
 
 const Layout = lazy(() => import('../layout'))
+const OptPage = lazy(() => import('../../pages/opt'))
 
 import Auth from '../../pages/login'
 import Loader from '@/shared/components/ui/loader/loader'
@@ -31,10 +32,12 @@ const App = (): JSX.Element => {
             <Route element={<PrivateRoute />}>
               <Route path="/">
                 <Route index element={<Auth />} />
+                {/* <Route path="/opt" element={<OptPage />} /> */}
               </Route>
             </Route>
             <Route path="/auth">
-              <Route index path="login" element={<Auth />} />
+              <Route index element={<Auth />} />
+              <Route path="/auth/opt" element={<OptPage />} />
             </Route>
             {/* <Route path='*' element={<PageNotFound />} /> */}
           </Route>

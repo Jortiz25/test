@@ -1,7 +1,7 @@
 import React from 'react'
 import { describe, expect, test } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
-import LoginForm from '../../../../../../src/core/pages/login/components/Form'
+import LoginForm from '../../../../../../src/core/pages/login/components/form'
 
 describe('FormFooter', () => {
   test('renders login form with correct elements and labels', async () => {

@@ -1,0 +1,34 @@
+.count-down__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.count-down__value {
+  font-size: 2.4rem;
+  font-weight: bold;
+  position: absolute;
+}
+
+.circle-loading {
+  stroke: var(--color-secondary);
+}
+
+.count-down-loading__circle {
+  transform: rotate(-90deg);
+  transform-origin: center;
+  stroke-dasharray: 380;
+  stroke-dashoffset: 380;
+  stroke: var(--color-primary);
+}
+
+@keyframes count_donw-curcle {
+  0% {
+    stroke-dashoffset: 380;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

@@ -8,7 +8,7 @@ import { Navigate, Outlet } from 'react-router-dom'
  */
 const PrivateRoute = (): JSX.Element => {
   const { token } = useAuthStore((state) => state)
-  return token ? <Outlet /> : <Navigate to="/auth/login" />
+  return token ? <Outlet /> : <Navigate to="/auth" />
 }
 
 export default PrivateRoute

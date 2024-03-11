@@ -2,7 +2,13 @@ import { Button } from '@/shared/components/ui/button'
 import { Typography } from '@/shared/components/ui/typography'
 import { useModalStore } from '@/store/modal'
 
-function FormFooter({ isFormValid }: { isFormValid: boolean }) {
+function FormFooter({
+  isFormValid,
+  isCountZero,
+}: {
+  isFormValid: boolean
+  isCountZero: boolean
+}) {
   const { showModal } = useModalStore()
 
   const modelTest = () =>
@@ -19,27 +25,28 @@ function FormFooter({ isFormValid }: { isFormValid: boolean }) {
         variant="paragraph"
         className="text-center form-footer__description"
       >
-        Si olvidaste tu clave, ingresa a tu aplicación de DING y realiza el
-        cambio de clave
+        Una vez termine el tiempo, puedes presionar reenvíar código para obtener
+        uno nuevo
       </Typography>
 
       <Button
         center
         variant="btn-primary"
         size="btn-large"
-        disabled={!isFormValid ? true : false}
-        type="submit"
+        disabled={!isCountZero ? true : false}
+        type="button"
       >
-        Continuar
+        Reenvíar código
       </Button>
       <Button
         onClick={modelTest}
         center
         variant="btn-primary"
         size="btn-large"
-        type="button"
+        type="submit"
+        disabled={!isFormValid ? true : false}
       >
-        Cancelar
+        Continuar
       </Button>
     </section>
   )
