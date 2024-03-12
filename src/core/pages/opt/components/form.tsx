@@ -39,7 +39,7 @@ function OtpForm(): JSX.Element {
   const count = useCountdown({ direction: 90, onComplete })
 
   const { formState } = form
-  const isFormValid = formState.isValid && formState.isDirty
+  // const isFormValid = formState.isValid && formState.isDirty
 
   if (isLoading) return <Loader />
 
@@ -73,7 +73,7 @@ function OtpForm(): JSX.Element {
             )}
           />
           <CountDownLoader count={count} />
-          <FormFooter isFormValid={isFormValid} isCountZero={count === 0} />
+          <FormFooter isFormValid={true} isCountZero={count === 0} />
         </form>
       </Form>
     </>

@@ -1,6 +1,7 @@
 import { Button } from '@/shared/components/ui/button'
 import { Typography } from '@/shared/components/ui/typography'
 import { useModalStore } from '@/store/modal'
+import { useEffect } from 'react'
 
 function FormFooter({
   isFormValid,
@@ -11,13 +12,17 @@ function FormFooter({
 }) {
   const { showModal } = useModalStore()
 
-  const modelTest = () =>
-    showModal({
-      title: 'Advertencia',
-      description: '¿Estás seguro de cancelar el pago de tu compra?',
-      type: 'warning',
-      isOnlyAceptButton: false,
-    })
+  useEffect(() => {
+    if (isCountZero) {
+      showModal({
+        title: 'Código expiró',
+        description:
+          'No ingresaste el código a tienpo, solicita otro en la opción “Reenvíar código”.',
+        type: 'error',
+        isOnlyAceptButton: true,
+      })
+    }
+  }, [isCountZero, showModal])
 
   return (
     <section className="form-footer">
@@ -39,7 +44,6 @@ function FormFooter({
         Reenvíar código
       </Button>
       <Button
-        onClick={modelTest}
         center
         variant="btn-primary"
         size="btn-large"

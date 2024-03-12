@@ -28,7 +28,7 @@ function Modal(): JSX.Element {
         <Typography variant="h3" size="xl">
           {title}
         </Typography>
-        <Typography variant="paragraph" size="sm">
+        <Typography variant="paragraph" size="sm" className="modal-description">
           {description}
         </Typography>
         <section className="modal-content__buttons">
